@@ -1,12 +1,13 @@
 # Korsmo
 
-Build and update hub image
+Build and update hub image:
 
-$ docker build -t twined/korsmo:1.0 .
-$ docker push twined/korsmo:1.0
+    $ docker build -t twined/korsmo:1.0 .
+    $ docker push twined/korsmo:1.0
 
 ### Example Dockerfile
 
+```
 FROM twined/korsmo:1.0
 
 MAINTAINER Twined Networks <mail@twined.net>
@@ -28,3 +29,5 @@ RUN cd assets/ && node_modules/.bin/brunch build -p
 RUN mix phx.digest
 RUN mix compile
 RUN mix release --verbosity=verbose
+
+```
